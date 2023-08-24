@@ -70,7 +70,10 @@
 
 	var response = client.ModifyAddressTemplateAttributeSync(request);
 
-	Console.WriteLine("更新 IP 地址成功！Request Id: " + response.RequestId);
+	Console.WriteLine("更新 IP 地址成功！");
+	Console.WriteLine("AddressTemplate Id: " + templateId);
+	Console.WriteLine("New Address: " + address);
+	Console.WriteLine("Request Id: " + response.RequestId);
 } catch (TencentCloudSDKException e) {
 	Console.WriteLine("腾讯云 CDN SDK 抛出异常：");
 	Console.WriteLine(e);
