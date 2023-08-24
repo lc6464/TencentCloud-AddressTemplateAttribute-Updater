@@ -4,10 +4,10 @@
 
 	var settingsFilePath = "";
 	if (File.Exists(settingsFilePath = Path.Combine(Path.GetDirectoryName(Environment.ProcessPath) ?? "", "appsettings.json"))) {
-		builder.AddJsonFile(settingsFilePath);
+		_ = builder.AddJsonFile(settingsFilePath);
 	}
 	if (File.Exists(settingsFilePath = Path.Combine(Environment.CurrentDirectory, "appsettings.json"))) {
-		builder.AddJsonFile(settingsFilePath);
+		_ = builder.AddJsonFile(settingsFilePath);
 	}
 
 	var configuration = builder.Build();
